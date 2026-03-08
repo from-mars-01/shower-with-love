@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-brand">
+          <a href="index.html">Shower with Love</a>
+        </div>
+      <ul class="nav-list">
+        <li><a href="about.html">Our Story</a></li>
+        <li><a href="find-us.html">Find Us</a></li>
+        <li><a href="contact.html">Volunteer</a></li>
+        <li><a href="donate.html">Donate</a></li>
+      </ul>
+      <div class="rightNav">
+        <input type="text" name="search" id="search" placeholder="Search">
+        <button class="btn btn-sm">Search</button>
+      </div>
+    </nav>
+    </header>
+    <main>
+      <h2 class="section-title">Volunteer Sign-Up</h2>
+      <div class="form-container">
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+    
+            <label for="task">Task Interest:</label>
+            <select id="task">
+                <option value="">-- Select an option --</option>
+                <option value="laundry">Assisting with Laundry</option>
+                <option value="outreach">Community Outreach</option>
+                <option value="cleaning">Cleaning Vans</option>
+                <option value="assitance">General Assistance with all tasks</option>
+            </select>
+
+            <label for="message">Why do you want to help?</label>
+            <textarea id="message" name="message" placeholder="Tell us about yourself..."></textarea>
+    
+            <button type="submit" class="btn btn-sm">Submit</button>
+        </form>
+      </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2026 Shower with Love</p>
+    </footer>
+  </body>
+</html>
