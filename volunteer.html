@@ -20,7 +20,7 @@
       <div class="navbar-nav ms-auto">
         <a class="nav-link" href="about.html">Our Story</a>
         <a class="nav-link" href="find-us.html">Find Us</a>
-        <a class="nav-link" href="contact.html">Volunteer</a>
+        <a class="nav-link" href="volunteer.html">Volunteer</a>
         <a class="nav-link" href="donate.html">Donate</a>
       </div>
     </div>
@@ -32,9 +32,9 @@
         <div class="col-md-8">
       <h2 class="section-title">Volunteer Sign-Up</h2>
       <div class="form-container">
-        <form>
+        <form name="formValidation" id="formValidation">
             <label for="name">Name:</label>
-            <input type="text" id="name" placeholder="Enter your name" required>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
     
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -43,7 +43,7 @@
             <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
     
             <label for="task">Task Interest:</label>
-            <select id="task">
+            <select id="task" name="task">
                 <option value="">-- Select an option --</option>
                 <option value="laundry">Assisting with Laundry</option>
                 <option value="outreach">Community Outreach</option>
@@ -63,6 +63,9 @@
     <footer>
         <p>Copyright &copy; 2026 Shower with Love</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="js/volunteer-form.js"></script>
   </body>
 </html>

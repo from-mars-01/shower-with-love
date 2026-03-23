@@ -20,7 +20,7 @@
       <div class="navbar-nav ms-auto">
         <a class="nav-link" href="about.html">Our Story</a>
         <a class="nav-link" href="find-us.html">Find Us</a>
-        <a class="nav-link" href="contact.html">Volunteer</a>
+        <a class="nav-link" href="volunteer.html">Volunteer</a>
         <a class="nav-link" href="donate.html">Donate</a>
       </div>
     </div>
@@ -32,27 +32,36 @@
         <div class="col-md-8">
       <h2 class="section-title">Help us by Donating</h2>
       <div class="form-container">
-        <form>
+        <form name="formValidation" id="formValidation">
             <label for="anonymous">
                 <input type="checkbox" id="anonymous" name="anonymous"> Donate Anonymously
             </label>
             <label for="name">Name <span>(Optional)</span></label>
-            <input type="text" id="name" placeholder="Enter your name">
+            <input type="text" id="name" name="name" placeholder="Enter your name">
     
             <label for="email">Email <span>(Required)</span></label>
             <input type="email" id="email" name="email" placeholder="Enter your email" required>
     
             <label for="phone">Phone Number <span>(Optional)</span></label>
-            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" maxlength="10">
 
             <label for="card">Credit Card Information</label>
             <input type="text" id="card" name="card" placeholder="Enter your credit card number" maxlength="19">
-
+            <div class="row">
+            <div class="col-md-6">
+                <label for="expiration">Expiration Date</label>
+                <input type="text" id="expiration" name="expiration" placeholder="MM/YY" maxlength="5">
+            </div>
+            <div class="col-md-6">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" placeholder="Enter your credit card CVV" maxlength="4">
+            </div>
+          </div>
             <label for="billing">Billing Address <span>(Required)</span></label>
             <input type="text" id="billing" name="billing" placeholder="Enter your billing address" required>
 
-            <label for="task">Donation Amount:</label>
-            <select id="task">
+            <label for="amount">Donation Amount:</label>
+            <select id="amount" name="amount">
                 <option value="">-- Select an option --</option>
                 <option value="5">$5</option>
                 <option value="10">$10</option>
@@ -73,12 +82,9 @@
     <footer>
         <p>Copyright &copy; 2026 Shower with Love</p>
     </footer>
-        <script>
-       document.getElementById("amount").addEventListener("change", function() {
-        const custom = document.getElementById("custom-amount");
-        custom.style.display = this.value === "other" ? "block" : "none";
-      }); 
-    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/donate-form.js"></script>
   </body>
 </html>

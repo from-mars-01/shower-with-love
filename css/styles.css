@@ -172,7 +172,10 @@
         }
 
         /* Donation Page Styles */
-
+        label.error {
+            color: red;
+            font-size: 14px;
+        }
 
         /* Footer Styles */
         footer {
