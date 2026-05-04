@@ -8,16 +8,16 @@
         <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Shower with Love</a>
+    <a class="navbar-brand" href="index.php">Shower with Love</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="about.html">Our Story</a>
-        <a class="nav-link" href="find-us.html">Find Us</a>
-        <a class="nav-link" href="volunteer.html">Volunteer</a>
-        <a class="nav-link" href="donate.html">Donate</a>
+        <a class="nav-link" href="about.php">Our Story</a>
+        <a class="nav-link" href="find-us.php">Find Us</a>
+        <a class="nav-link" href="volunteer.php">Volunteer</a>
+        <a class="nav-link" href="donate.php">Donate</a>
       </div>
     </div>
   </div>
@@ -27,11 +27,11 @@
         <div class="container mt-5 text-center">
             <h1>Thank You for Your Donation!</h1>
             <p>We appreciate your support and the difference you make in our community.</p>
-            <a href="index.html" class="btn btn-primary mt-3">Return to Home</a>
+            <a href="index.php" class="btn btn-primary mt-3">Return to Home</a>
         </div>
     </main>
     <footer class="text-center mt-5">
-        <p>Copyright &copy; 2026 Shower with Love</p>
+        <p>Copyright &copy; <?php echo date("Y"); ?> Shower with Love</p>
     </footer>
     </body>
 </html> 

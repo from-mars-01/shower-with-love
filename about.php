@@ -12,16 +12,16 @@
     <header>
      <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Shower with Love</a>
+    <a class="navbar-brand" href="index.php">Shower with Love</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="about.html">Our Story</a>
-        <a class="nav-link" href="find-us.html">Find Us</a>
-        <a class="nav-link" href="volunteer.html">Volunteer</a>
-        <a class="nav-link" href="donate.html">Donate</a>
+        <a class="nav-link" href="about.php">Our Story</a>
+        <a class="nav-link" href="find-us.php">Find Us</a>
+        <a class="nav-link" href="volunteer.php">Volunteer</a>
+        <a class="nav-link" href="donate.php">Donate</a>
       </div>
     </div>
   </div>
@@ -34,7 +34,7 @@
         <p>We are grateful for the support of our donors and volunteers who make our work possible. Together, we can continue to expand our reach and provide essential services to those in need. Thank you for being a part of our story and helping us make a difference in the lives of so many.</p>
     </main>
     <footer>
-        <p>Copyright &copy; 2026 Shower with Love</p>
+        <p>Copyright &copy; <?php echo date("Y"); ?> Shower with Love</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>

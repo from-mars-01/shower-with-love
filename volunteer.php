@@ -12,16 +12,16 @@
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Shower with Love</a>
+    <a class="navbar-brand" href="index.php">Shower with Love</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="about.html">Our Story</a>
-        <a class="nav-link" href="find-us.html">Find Us</a>
-        <a class="nav-link" href="volunteer.html">Volunteer</a>
-        <a class="nav-link" href="donate.html">Donate</a>
+        <a class="nav-link" href="about.php">Our Story</a>
+        <a class="nav-link" href="find-us.php">Find Us</a>
+        <a class="nav-link" href="volunteer.php">Volunteer</a>
+        <a class="nav-link" href="donate.php">Donate</a>
       </div>
     </div>
   </div>
@@ -31,8 +31,8 @@
         <div class="row justify-content-center">
         <div class="col-md-8">
       <h2 class="section-title">Volunteer Sign-Up</h2>
+      <form action="submit_form.php" method="POST" name="formValidation" id="formValidation">
       <div class="form-container">
-        <form name="formValidation" id="formValidation">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
     
@@ -48,7 +48,7 @@
                 <option value="laundry">Assisting with Laundry</option>
                 <option value="outreach">Community Outreach</option>
                 <option value="cleaning">Cleaning Vans</option>
-                <option value="assitance">General Assistance with all tasks</option>
+                <option value="assistance">General Assistance with all tasks</option>
             </select>
 
             <label for="message">Why do you want to help?</label>
@@ -61,7 +61,7 @@
     </div>
     </main>
     <footer>
-        <p>Copyright &copy; 2026 Shower with Love</p>
+        <p>Copyright &copy; <?php echo date("Y"); ?> Shower with Love</p>
     </footer>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>

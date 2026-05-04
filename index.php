@@ -12,16 +12,16 @@
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">Shower with Love</a>
+          <a class="navbar-brand" href="index.php">Shower with Love</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <div class="navbar-nav ms-auto">
-              <a class="nav-link" href="about.html">Our Story</a>
-              <a class="nav-link" href="find-us.html">Find Us</a>
-              <a class="nav-link" href="volunteer.html">Volunteer</a>
-              <a class="nav-link" href="donate.html">Donate</a>
+              <a class="nav-link" href="about.php">Our Story</a>
+              <a class="nav-link" href="find-us.php">Find Us</a>
+              <a class="nav-link" href="volunteer.php">Volunteer</a>
+              <a class="nav-link" href="donate.php">Donate</a>
             </div>
           </div>
         </div>
@@ -39,11 +39,11 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
             </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -56,17 +56,41 @@
               <img class="d-block w-100" src="images/Shower.jpg" alt="Shower slide" style="height: 400px; object-fit: cover;">
             </div>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
+            <span class="visually-hidden">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
+            <span class="visually-hidden">Next</span>
           </a>
           </div>
         </div>
       </div>
+      <?php
+        $orgName = "Shower with Love";
+        $slogan = "Returning dignity to those in need.";
+
+        $hour = (int)date("G");
+
+        if ($hour < 12) {
+            $greeting = "Good morning!";
+        } elseif ($hour < 18) {
+            $greeting = "Good afternoon!";
+        } else {
+            $greeting = "Good evening!";
+        }
+
+        echo "<p class='lead'>$greeting! Welcome to $orgName.</p>";
+        echo "<p>$slogan</p>";
+
+        $dayOfWeek = date("l");
+        if ($dayOfWeek == "Saturday" || $dayOfWeek == "Sunday") {
+            echo "<p class='text-primary'>Thanks for visiting us this weekend!</p>";
+        } else {
+            echo "<p class='text-primary'>Have a great day supporting our mission!</p>";
+        }
+      ?>
       <div class="row mt-5 justify-content-center">
         <div class="col-md-3">
     <div class="card text-center">
@@ -98,7 +122,7 @@
       </div>
  </main>
     <footer class="mt-5">
-        <p>Copyright &copy; 2026 Shower with Love</p>
+        <p>Copyright &copy; <?php echo date("Y"); ?> Shower with Love</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
