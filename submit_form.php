@@ -1,10 +1,41 @@
 <?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $phone = $_POST['phone'] ?? '';
-    $task = $_POST['task'] ?? '';
-    $message = $_POST['message'] ?? '';
+    $name = trim($_POST['name'] ?? '');
+    $email = trim($_POST['email'] ?? '');
+    $phone = trim($_POST['phone'] ?? '');
+    $task = trim($_POST['task'] ?? '');
+    $message = trim($_POST['message'] ?? '');
+
+    if(empty($name) || empty($email)) {
+        die("Please complete all required fields");
+    }
+
+    $name = strip_tags($name);
+    $email = strip_tags($email);
+    $phone = strip_tags($phone);
+    $task = strip_tags($task);
+    $message = strip_tags($message);
+
+    include 'db_connect.php';
+
+    $sql = "INSERT INTO volunteers_t (name, email, phone, task, message) VALUES (:name, :email, :phone, :task, :message)";
+
+    $stmt = $pdo->prepare($sql);
+
+    $stmt-> execute([
+        ':name' => $name,
+        ':email' => $email,
+        ':phone' => $phone,
+        ':task' => $task,
+        ':message' => $message
+    ]);
+
+    echo "Thank you. Your volunteer form has been submitted successfully.";
+
 } else {
     echo "No form data submitted.";
     exit;

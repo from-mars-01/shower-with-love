@@ -68,9 +68,8 @@
         </div>
       </div>
       <?php
+        date_default_timezone_set('America/Chicago');
         $orgName = "Shower with Love";
-        $slogan = "Returning dignity to those in need.";
-
         $hour = (int)date("G");
 
         if ($hour < 12) {
@@ -81,16 +80,18 @@
             $greeting = "Good evening!";
         }
 
-        echo "<p class='lead'>$greeting! Welcome to $orgName.</p>";
-        echo "<p>$slogan</p>";
-
         $dayOfWeek = date("l");
         if ($dayOfWeek == "Saturday" || $dayOfWeek == "Sunday") {
-            echo "<p class='text-primary'>Thanks for visiting us this weekend!</p>";
+            $dayMessage = "Thanks for visiting us this weekend!";
         } else {
-            echo "<p class='text-primary'>Have a great day supporting our mission!</p>";
+            $dayMessage = "Have a great day supporting our mission!";
         }
+
+        $popupMessage = "$greeting Welcome to $orgName. $dayMessage";
       ?>
+      <script>
+        alert("<?php echo $popupMessage; ?>");
+      </script>
       <div class="row mt-5 justify-content-center">
         <div class="col-md-3">
     <div class="card text-center">
